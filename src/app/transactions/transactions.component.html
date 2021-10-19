@@ -1,1 +1,18 @@
-<p>transactions works!</p>
+<div class="pt-4">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">FROM</th>
+        <th class="text-center">TO</th>
+        <th class="text-center">GASS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of data.results">
+        <td class="text-center">{{transaction.from}}</td>
+        <td class="text-center">{{transaction.to}}</td>
+        <td class="text-right">{{transaction.gas|number}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

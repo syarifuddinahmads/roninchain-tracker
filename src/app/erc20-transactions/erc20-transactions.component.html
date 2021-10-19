@@ -1,1 +1,22 @@
-<p>erc20-transactions works!</p>
+<div class="pt-4">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">NAME</th>
+        <th class="text-center">SYMBOL</th>
+        <th class="text-center">TYPE</th>
+        <th class="text-center">FROM</th>
+        <th class="text-center">TO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of data.results">
+        <td class="text-center">{{transaction.token_name}}</td>
+        <td class="text-center">{{transaction.token_symbol}}</td>
+        <td class="text-center">{{transaction.token_type}}</td>
+        <td class="text-center">{{transaction.from}}</td>
+        <td class="text-center">{{transaction.to}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

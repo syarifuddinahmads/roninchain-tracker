@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,8 @@ import { Erc721TransactionsComponent } from './erc721-transactions/erc721-transa
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

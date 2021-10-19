@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { RoninService } from '../ronin.service';
 
 @Component({
   selector: 'app-transactions',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionsComponent implements OnInit {
 
-  constructor() { }
+
+  public data: any = {}
+
+  constructor(private ronin_service: RoninService) { }
 
   ngOnInit(): void {
+
+    this.ronin_service.get_transaction().subscribe(data => {
+      this.data = data;
+    })
+
+
   }
 
 }

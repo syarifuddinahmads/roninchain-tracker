@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api:'https://explorer.roninchain.com/api/',
+  roninchain:'0x29143b0bd5df2b57845441fc155d1e1795e6ed80'
 };
 
 /*
